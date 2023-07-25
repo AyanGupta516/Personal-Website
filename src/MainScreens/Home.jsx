@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import UpperNavigationBar from './UpperNavigationBar'
 import {NavLink} from 'react-router-dom'
-import Insta from '/Users/ayan/Desktop/Dev/personal-website/src/assets/Insta.svg'
-import Linkedin from '/Users/ayan/Desktop/Dev/personal-website/src/assets/Linkedin.svg'
+import Insta from '../assets/Insta.svg'
+import Linkedin from '../assets/Linkedin.svg'
 export default function Home() {
     const [isHovered, setIsHovered] = useState(null)
 
