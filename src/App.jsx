@@ -31,7 +31,7 @@ function App() {
           <Route path = '/Experience/UTResearch' element = {<UTResearch/>} />
           <Route path = '/Experience/SE' element = {<SE/>} />
           <Route path = '/Experience/Huffman' element = {<Huffman/>} />
-          <Route path = '/Experience/Porfolio' element = {<Portfolio/>} />
+          <Route path = '/Experience/Portfolio' element = {<Portfolio/>} />
           <Route path = '/Experience/Tennis' element = {<Tennis/>} />
       </Routes>
       
