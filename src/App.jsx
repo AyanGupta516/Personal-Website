@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import {Routes, Route, BrowserRouter} from "react-router-dom";
+import Contact from './MainScreens/Contact' 
+import Experience from './MainScreens/Experience'
+import Home from './MainScreens/Home'
+import Skills from './MainScreens/Skills'
+import UpperNavigationBar from './MainScreens/UpperNavigationBar'
+import AboutMe from './MainScreens/AboutMe'
+import Qwell from './ExperienceScreens/Qwell'
+import Huffman from './ExperienceScreens/Huffman'
+import Portfolio from './ExperienceScreens/Portfolio'
+import SE from './ExperienceScreens/SE'
+import UTResearch from './ExperienceScreens/UTResearch'
+import UHResearch from './ExperienceScreens/UHResearch'
+import Tennis from './ExperienceScreens/Tennis'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+  <>
+    <BrowserRouter>
+      <UpperNavigationBar/>
+      <Routes>
+          <Route path = '/' element = {<Home/>} />
+          <Route path = '/AboutMe' element = {<AboutMe/>} />
+          <Route path = '/Experience' element = {<Experience/>} />
+          <Route path = '/Skills' element = {<Skills/>} />
+          <Route path = '/Contact' element = {<Contact/>} />
+          <Route path = '/Experience/UHResearch' element = {<UHResearch/>} />
+          <Route path = '/Experience/Qwell' element = {<Qwell/>} />
+          <Route path = '/Experience/UTResearch' element = {<UTResearch/>} />
+          <Route path = '/Experience/SE' element = {<SE/>} />
+          <Route path = '/Experience/Huffman' element = {<Huffman/>} />
+          <Route path = '/Experience/Porfolio' element = {<Portfolio/>} />
+          <Route path = '/Experience/Tennis' element = {<Tennis/>} />
+      </Routes>
+      
+    </BrowserRouter>
     </>
   )
 }
