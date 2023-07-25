@@ -39,7 +39,7 @@ export default function Skills() {
             </h1>
             <div style={{ display: 'flex', flexDirection: 'row', border: 'dotted', position: 'absolute', top: '22.5%', left: '50%', transform: 'translateX(-50%)'}}>
                 {imagesRow1.map((image) => (
-                <a href = {image.link}>
+                <a href = {image.link} target="_blank">
                     <div key = {image.id} style = {{border: 'dotted', height: '250px', width: '250px', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>
@@ -49,7 +49,7 @@ export default function Skills() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', border: 'dotted', position: 'absolute', top: '53.2%', left: '50%', transform: 'translateX(-50%)'}}>
                 {imagesRow2.map((image) => (
-                <a href = {image.link}>
+                <a href = {image.link} target="_blank">
                     <div key = {image.id} style = {{border: 'dotted', height: '250px', width: '250px', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>
@@ -59,7 +59,7 @@ export default function Skills() {
             </div>
             <div style={{display: 'flex', flexDirection: 'row', border: 'dotted', position: 'absolute', top: '83.9%', left: '50%', transform: 'translateX(-50%)'}}>
                 {imagesRow3.map((image) => (
-                <a href = {image.link}>
+                <a href = {image.link} target="_blank">
                     <div key = {image.id} style = {{border: 'dotted', height: '250px', width: '250px', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>

@@ -12,9 +12,9 @@ export default function UTResearch() {
                 </ul>
                 <h1 style = {{color: '#BB8FCE', fontSize: '32px', textAlign: 'left', marginTop: '60px', borderBottom: 'solid', width: '225px'}}> Fall 2023 Work </h1>
                 <ul style = {{textAlign: 'left', listStyle: 'disc', marginLeft: '-25px', width: '1250px', marginTop: '30px'}}>
-                    <li style = {{color: 'lightgrey', fontSize: '18px', marginBottom: '20px'}}> Working in a group of 3 and conducting research in </li>
-                    <li style = {{color: 'lightgrey', fontSize: '18px', marginBottom: '20px'}}> Using Machine Learning to --</li>
-                    <li style = {{color: 'lightgrey', fontSize: '18px', marginBottom: '20px'}}> This is a filler for now once I start doing stuff Ill have more things to put</li>
+                    <li style = {{color: 'lightgrey', fontSize: '18px', marginBottom: '20px'}}> Working collaboratively in a team of three, we are conducting research on the clustering of galaxies based on their emission lines </li>
+                    <li style = {{color: 'lightgrey', fontSize: '18px', marginBottom: '20px'}}>  Our study involves utilizing data from the Sloan Digital Sky Survey (SDSS) to develop a Machine Learning clustering algorithm</li>
+                    <li style = {{color: 'lightgrey', fontSize: '18px', marginBottom: '20px'}}> The primary goal of this project is to write a research paper for publication </li>
                 </ul>
             </div>
         </>

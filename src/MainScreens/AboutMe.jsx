@@ -16,19 +16,19 @@ export default function AboutMe() {
         <div> 
         <div style = {{display: 'inline-block', borderRadius: '20px', backgroundColor:'#454545', marginRight: '50px', width: '500px', marginLeft: '-15px'}}>
             <h1 style = {headingstyle}> Mathematics</h1> 
-            <p style = {paragraphstyle}> Throughout Highschool, I competed in the Math Olympiad and local tournaments while placing well</p>
+            <p style = {paragraphstyle}> During high school, I actively took part in the Math Olympiad and local tournaments, earning accolades for my performances.</p>
         </div>
         <div style = {{display: 'inline-block', borderRadius: '20px', backgroundColor:'#454545', width: '500px'}}>
             <h1 style = {headingstyle}> Coding </h1> 
-            <p style = {paragraphstyle}> My favorite language to use in general is Python and ReactJS for web development </p>
+            <p style = {paragraphstyle}> In general, I favor Python and Java as my top choices for programming and React being my go to language for web-dev </p>
         </div>
         <div style = {{display: 'inline-block', borderRadius: '20px', backgroundColor:'#454545', width: '500px', marginRight: '50px', marginTop: '50px' }}>
             <h1 style = {headingstyle}> Tennis </h1> 
-            <p style = {paragraphstyle}> I played Varsity Tennis in High School and continue to enjoy watching the sport </p>
+            <p style = {paragraphstyle}> In high school, I was part of my school's varsity tennis team, and even now, I find great pleasure in watching and playing the sport </p>
         </div>
         <div style = {{display: 'inline-block', borderRadius: '20px', backgroundColor:'#454545', width: '500px' }}>
             <h1 style = {headingstyle}> Watching Movies </h1> 
-            <p style = {paragraphstyle}> A self proclaimed movie critic who enjoys a complex and a well thoughtout story </p>
+            <p style = {paragraphstyle}> I enjoy watching movies and immersing myself in the captivating stories being told on the big screen </p>
         </div>
         </div>
         
