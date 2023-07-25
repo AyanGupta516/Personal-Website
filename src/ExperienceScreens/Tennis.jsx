@@ -1,6 +1,6 @@
 import React from 'react'
-import Radial from '/Users/ayan/Desktop/Dev/personal-website/src/assets/RadialPlots.png'
-import Box from '/Users/ayan/Desktop/Dev/personal-website/src/assets/BoxPlots.png'
+import Radial from '../assets/RadialPlots.png'
+import Box from '../assets/BoxPlots.png'
 export default function Tennis() {
     return (
         <>

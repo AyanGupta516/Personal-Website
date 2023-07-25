@@ -1,5 +1,5 @@
 import React from 'react'
-import myVideo from '/Users/ayan/Desktop/Dev/personal-website/src/assets/SUMO.mp4'
+import myVideo from '../assets/SUMO.mp4'
 export default function UHResearch() {
     return (
         <>

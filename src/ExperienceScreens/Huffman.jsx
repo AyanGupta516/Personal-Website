@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '/Users/ayan/Desktop/Dev/personal-website/src/assets/Huffman.png'
+import Image from '../assets/Huffman.png'
 export default function Huffman() {
     return (
         <div>
