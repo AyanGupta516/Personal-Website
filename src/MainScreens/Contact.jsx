@@ -11,7 +11,7 @@ export default function Contact() {
         padding: '20px',
         border: '5px solid #ccc',
         borderRadius: '20px',
-        marginTop: '150px',
+        marginTop: '0px',
       };
     
       const labelStyle = {
@@ -79,7 +79,7 @@ export default function Contact() {
     };
     return (
     <>
-    <h1 style = {{color:'#3BBA9C', fontSize:'64px', fontWeight: 'bold', marginTop: '7%', top: '-2.5%', position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}> Contact Me!</h1>
+    <h1 style = {{color:'#3BBA9C', fontSize:'64px', fontWeight: 'bold', marginTop: '7%', justifyContent: 'center', display: 'flex', marginTop: '50px'}}> Contact Me!</h1>
         <div style = {formStyle}>
         <form ref = {form} onSubmit = {sendEmail}>
         <div>

@@ -35,13 +35,13 @@ export default function Skills() {
     ]
     return (
         <>
-           <div style = {{height: '950px', overflow: 'auto'}}>
-            <h1 style = {{color:'#3BBA9C', fontSize: '48px', fontWeight: 'bold', justifyContent: 'center', position:'absolute', top:'7.5%', left: '50%', transform: 'translateX(-50%)', borderBottom: 'solid', width: '500px', paddingBottom: '15px'}}>
+           <div style = {{height: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <h1 style = {{display: 'flex', color:'#3BBA9C', fontSize: '48px', fontWeight: 'bold', justifyContent: 'center', borderBottom: 'solid', width: '500px', paddingBottom: '15px', textAlign: 'center', marginTop: '50px'}}>
                 Skills
             </h1>
-            <div style={{ display: 'flex', flexDirection: 'row', border: 'dotted', position: 'absolute', top: '22.5%', left: '50%', transform: 'translateX(-50%)'}}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px'}}>
                 {imagesRow1.map((image) => (
-                <a href = {image.link} target="_blank">
+                <a href = {image.link} target="_blank" style = {{margin: '0px'}}>
                     <div key = {image.id} style = {{border: 'dotted', height: '250px', width: '250px', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', opacity: isHovered === image.alt ? '.65' : '1' }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>
@@ -49,9 +49,9 @@ export default function Skills() {
                 </a>
                 ))}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', border: 'dotted', position: 'absolute', top: '53.2%', left: '50%', transform: 'translateX(-50%)'}}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px'}}>
                 {imagesRow2.map((image) => (
-                <a href = {image.link} target="_blank">
+                <a href = {image.link} target="_blank" style = {{margin: '0px'}}>
                     <div key = {image.id} style = {{border: 'dotted', height: '250px', width: '250px', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center',  opacity: isHovered === image.alt ? '.65' : '1'  }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>
@@ -59,9 +59,9 @@ export default function Skills() {
                 </a>
                 ))}
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', border: 'dotted', position: 'absolute', top: '83.9%', left: '50%', transform: 'translateX(-50%)'}}>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px'}}>
                 {imagesRow3.map((image) => (
-                <a href = {image.link} target="_blank">
+                <a href = {image.link} target="_blank" style = {{margin: '0px'}}>
                     <div key = {image.id} style = {{border: 'dotted', height: '250px', width: '250px', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center',  opacity: isHovered === image.alt ? '.65' : '1'  }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>
