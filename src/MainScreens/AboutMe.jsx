@@ -13,8 +13,8 @@ export default function AboutMe() {
     return (
     <>
         <div>
-            <h1 style = {{color: '#3BBA9C', marginTop: '0rem'}}> About Me </h1>
-            <p style = {{color: 'white', fontSize: '1.25rem', textAlign: 'center', marginTop: '-20px', display: 'flex', justifyContent: 'center'}}> I'm a student at UT-Austin studying Computer Science & Mathematics. What I enjoy most about programming is the 
+            <h1 style = {{color: '#3BBA9C', paddingTop: '1.25rem'}}> About Me </h1>
+            <p style = {{color: 'white', fontSize: '1.25rem', textAlign: 'center', marginTop: '-1rem', display: 'flex', justifyContent: 'center'}}> I'm a student at UT-Austin studying Computer Science & Mathematics. What I enjoy most about programming is the 
                 ability to take complex tasks and break them into small pieces, to create cool things or solve interesting problems. I am 
                 most interested in backend algorithimic design as well as Machine Learning but also enjoy the process of constructing a web
                 or mobile application. My goal right now is to learn as much as possible and to continue exploring my interests as much as I can. 
