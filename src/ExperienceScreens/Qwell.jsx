@@ -14,7 +14,6 @@ const QwellPresentation = () => {
           overflow: 'hidden',
           borderRadius: '8px',
           willChange: 'transform',
-          height: '100%',
         }}
       >
         <iframe

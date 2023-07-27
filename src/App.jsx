@@ -9,7 +9,7 @@ import UpperNavigationBar from './MainScreens/UpperNavigationBar'
 import AboutMe from './MainScreens/AboutMe'
 import Qwell from './ExperienceScreens/Qwell'
 import Huffman from './ExperienceScreens/Huffman'
-import Portfolio from './ExperienceScreens/Portfolio'
+import Hackathon from './ExperienceScreens/Hackathon'
 import SE from './ExperienceScreens/SE'
 import UTResearch from './ExperienceScreens/UTResearch'
 import UHResearch from './ExperienceScreens/UHResearch'
@@ -31,7 +31,7 @@ function App() {
           <Route path = '/Experience/UTResearch' element = {<UTResearch/>} />
           <Route path = '/Experience/SE' element = {<SE/>} />
           <Route path = '/Experience/Huffman' element = {<Huffman/>} />
-          <Route path = '/Experience/Portfolio' element = {<Portfolio/>} />
+          <Route path = '/Experience/Hackathon' element = {<Hackathon/>} />
           <Route path = '/Experience/Tennis' element = {<Tennis/>} />
       </Routes>
       

@@ -33,9 +33,9 @@ export default function Experience() {
                 <h1 style = {experience_heading_style}> Huffman Encoding </h1>
                 <p style = {experience_paragraph_style}> Implemented Huffman's File Compression & Decompression Algorithim </p>
         </NavLink>
-        <NavLink to = '/Experience/Portfolio'style = {{display: 'block', borderRadius: '1.75rem', padding: '1rem', marginBottom: '2rem', backgroundColor: '#454545', transition: 'transform 0.1s ease', transform: HoveredTab === 'PW' ? 'scale(1.1)' : 'scale(1)', width: '650px'}} onMouseEnter={() => HandleHovered("PW")} onMouseLeave={() => setIsHovered(null)} >
-                <h1 style = {experience_heading_style}> Personal Website </h1>
-                <p style = {experience_paragraph_style}> Developed Personal Portfolio Page using React </p>
+        <NavLink to = '/Experience/Hackathon'style = {{display: 'block', borderRadius: '1.75rem', padding: '1rem', marginBottom: '2rem', backgroundColor: '#454545', transition: 'transform 0.1s ease', transform: HoveredTab === 'PW' ? 'scale(1.1)' : 'scale(1)', width: '650px'}} onMouseEnter={() => HandleHovered("PW")} onMouseLeave={() => setIsHovered(null)} >
+                <h1 style = {experience_heading_style}> ConfessTX </h1>
+                <p style = {experience_paragraph_style}> An anonymous UT-Austin Student Forum </p>
         </NavLink>
         <NavLink to = '/Experience/Tennis'style = {{display: 'block', borderRadius: '1.75rem', padding: '1rem', marginBottom: '2rem', backgroundColor: '#454545', transition: 'transform 0.1s ease', transform: HoveredTab === 'Tennis' ? 'scale(1.1)' : 'scale(1)', width: '650px'}} onMouseEnter={() => HandleHovered("Tennis")} onMouseLeave={() => setIsHovered(null)} >
                 <h1 style = {experience_heading_style}> Exploring Tennis Statistics </h1>
