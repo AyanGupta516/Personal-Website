@@ -1,45 +1,100 @@
-import React, {useState} from 'react'
-import UpperNavigationBar from './UpperNavigationBar'
-import {NavLink} from 'react-router-dom'
-import Insta from '../assets/Insta.svg'
-import Linkedin from '../assets/Linkedin.svg'
-import GitHub from '../assets/github.svg'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import Insta from '../assets/Insta.svg';
+import Linkedin from '../assets/Linkedin.svg';
+import GitHub from '../assets/github.svg';
+
 export default function Home() {
-    const [isHovered, setIsHovered] = useState(null)
+  const [isHovered, setIsHovered] = useState(null);
 
-    const buttonStyleWithoutHover = {color: 'black', marginTop: '15px', fontSize:'24px', borderRadius: '20px', padding: '10px', border: 'solid', backgroundColor: '#3BBA9C', position: 'absolute', left: '50%', transform: 'translateX(-50%)'}
+  const buttonStyleWithoutHover = {
+    color: 'black',
+    fontSize: '1.25rem',
+    borderRadius: '20px',
+    padding: '1rem 1.5rem',
+    border: 'solid',
+    backgroundColor: '#3BBA9C',
+  };
 
-    const buttonStyleWithHover = {color: 'black', marginTop: '15px', fontSize:'24px', borderRadius: '20px', padding: '10px', border: 'solid', backgroundColor: '#6EE5CD', position: 'absolute', left: '50%', transform: 'translateX(-50%)'}
-    const mouseOver = (tab) => {
-        setIsHovered(tab)
-    }
-    const notmouseOver = () => {
-        setIsHovered(null)
-    }
-    const ButtonStyle = isHovered === 'Contact' ? buttonStyleWithHover : buttonStyleWithoutHover
-    return (
-        
-        <>
-            <UpperNavigationBar />
-            <h1 style = {{color:'white', fontSize:'64px', marginTop: '0px', fontWeight: 'bold'}}> Hi, my name is Ayan. </h1>
-            <h2 style = {{color:'#3BBA9C', fontSize: '48px', borderBottom:  'solid', paddingBottom: '30px', fontWeight: 'bold', marginTop: '-30px'}}> I Study CS & Math <a href= 'https://www.utexas.edu/' style = {{color:'#3BBA9C', fontWeight: 'bold'}}>@ UT-Austin </a></h2>
-            <h1 style = {{color:'white', fontSize:'20px', marginTop: '-20px', fontWeight: 'bold', textAlign: 'center'}}> My current interests lie in Machine Learning, Backend Software Development, and Data Science. </h1>
-            <h1 style = {{color:'white', fontSize:'20px', marginTop: '20px', fontWeight: 'bold', textAlign: 'center'}}> Reach me here: ayan.x.gupta@gmail.com </h1>
-            <NavLink to = '/Contact' onMouseEnter = {() => mouseOver('Contact')} onMouseLeave={notmouseOver} style = {ButtonStyle}> 
-            Contact me</NavLink>
-            <div style = {{height: '50px', width: '150px', position: 'absolute', left:'0%', bottom: '0%', display: 'inline-block'}}>
-            <a href="https://github.com/AyanGupta516" target="_blank" rel="noopener noreferrer" onMouseEnter = {() => mouseOver('Git')} onMouseLeave={notmouseOver}>
-                <img src = {GitHub} style = {{width: '33.3%', height: '100%', opacity: isHovered === 'Git'? '.4': '1'}}/>
-            </a>
-            <a href="https://www.linkedin.com/in/ayan-gupta-8042781b0/" target="_blank" rel="noopener noreferrer" onMouseEnter = {() => mouseOver('Link')} onMouseLeave={notmouseOver}>
-                <img src={Linkedin} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Link'? '.4': '1' }} alt="LinkedIn" />
-            </a>
-            <a href="https://www.instagram.com/ayangupta516/" target="_blank" rel="noopener noreferrer" onMouseEnter = {() => mouseOver('Insta')} onMouseLeave={notmouseOver}>
-                <img src = {Insta} style = {{width: '33.3%', height: '100%', opacity: isHovered === 'Insta'? '.4': '1'}}/>
-            </a>
-            </div>
+  const buttonStyleWithHover = {
+    ...buttonStyleWithoutHover,
+    backgroundColor: '#6EE5CD',
+  };
 
-        </>
-        
-    )
+  const mouseOver = (tab) => {
+    setIsHovered(tab);
+  };
+
+  const notmouseOver = () => {
+    setIsHovered(null);
+  };
+
+  const ButtonStyle = isHovered === 'Contact' ? buttonStyleWithHover : buttonStyleWithoutHover;
+
+  return (
+    <>
+      <h1 style={{ color: 'white', fontSize: '4rem', marginTop: '0', fontWeight: 'bold' }}>
+        Hi, my name is Ayan.
+      </h1>
+      <h2
+        style={{
+          color: '#3BBA9C',
+          fontSize: '3rem',
+          borderBottom: 'solid',
+          paddingBottom: '1.875rem', // Adjusted padding to maintain the same size visually
+          fontWeight: 'bold',
+          marginTop: '-1.875rem', // Adjusted margin to maintain the same size visually
+        }}
+      >
+        I Study CS & Math <a href="https://www.utexas.edu/" style={{ color: '#3BBA9C', fontWeight: 'bold' }}>
+          @ UT-Austin
+        </a>
+      </h2>
+      <h1 style={{ color: 'white', fontSize: '1.25rem', marginTop: '-1.25rem', fontWeight: 'bold', textAlign: 'center' }}>
+        My current interests lie in Machine Learning, Backend Software Development, and Data Science.
+      </h1>
+      <h1 style={{ color: 'white', fontSize: '1.25rem', marginTop: '1.25rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '2.5rem' }}>
+        Reach me here: ayan.x.gupta@gmail.com
+      </h1>
+      <NavLink
+        to="/Contact"
+        onMouseEnter={() => mouseOver('Contact')}
+        onMouseLeave={notmouseOver}
+        style={ButtonStyle}
+      >
+        Contact me
+      </NavLink>
+      <div
+        style={{
+          height: '3.125rem', // Adjusted height to maintain the same size visually
+          width: '100%', // Take up the full available width
+          position: 'absolute',
+          left: '0',
+          bottom: '0',
+        }}
+      >
+        <a href="https://github.com/AyanGupta516" target="_blank" rel="noopener noreferrer" onMouseEnter={() => mouseOver('Git')} onMouseLeave={notmouseOver}>
+          <img src={GitHub} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Git' ? '0.4' : '1' }} alt="GitHub" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ayan-gupta-8042781b0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => mouseOver('Link')}
+          onMouseLeave={notmouseOver}
+        >
+          <img src={Linkedin} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Link' ? '0.4' : '1' }} alt="LinkedIn" />
+        </a>
+        <a
+          href="https://www.instagram.com/ayangupta516/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => mouseOver('Insta')}
+          onMouseLeave={notmouseOver}
+        >
+          <img src={Insta} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Insta' ? '0.4' : '1' }} alt="Instagram" />
+        </a>
+      </div>
+    </>
+  );
 }
