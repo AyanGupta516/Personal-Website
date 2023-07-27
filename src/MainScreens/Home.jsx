@@ -40,8 +40,8 @@ export default function Home() {
         style={{
           color: '#3BBA9C',
           fontSize: '3rem',
-          borderBottom: 'solid',
-          paddingBottom: '1.875rem', // Adjusted padding to maintain the same size visually
+          borderBottom: 'solid 2px',
+          paddingBottom: '1.5rem', // Adjusted padding to maintain the same size visually
           fontWeight: 'bold',
           marginTop: '-1.875rem', // Adjusted margin to maintain the same size visually
         }}
@@ -66,15 +66,17 @@ export default function Home() {
       </NavLink>
       <div
         style={{
-          height: '3.125rem', // Adjusted height to maintain the same size visually
-          width: '100%', // Take up the full available width
-          position: 'absolute',
-          left: '0',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          width: '100%',
           bottom: '0',
+          left: '0', 
+          position: 'fixed'
         }}
       >
         <a href="https://github.com/AyanGupta516" target="_blank" rel="noopener noreferrer" onMouseEnter={() => mouseOver('Git')} onMouseLeave={notmouseOver}>
-          <img src={GitHub} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Git' ? '0.4' : '1' }} alt="GitHub" />
+          <img src={GitHub} style={{ width: '3rem', height: '3rem', opacity: isHovered === 'Git' ? '0.4' : '1' }} alt="GitHub" />
         </a>
         <a
           href="https://www.linkedin.com/in/ayan-gupta-8042781b0/"
@@ -83,7 +85,7 @@ export default function Home() {
           onMouseEnter={() => mouseOver('Link')}
           onMouseLeave={notmouseOver}
         >
-          <img src={Linkedin} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Link' ? '0.4' : '1' }} alt="LinkedIn" />
+          <img src={Linkedin} style={{ width: '3rem', height: '3rem', opacity: isHovered === 'Link' ? '0.4' : '1' }} alt="LinkedIn" />
         </a>
         <a
           href="https://www.instagram.com/ayangupta516/"
@@ -92,7 +94,7 @@ export default function Home() {
           onMouseEnter={() => mouseOver('Insta')}
           onMouseLeave={notmouseOver}
         >
-          <img src={Insta} style={{ width: '33.3%', height: '100%', opacity: isHovered === 'Insta' ? '0.4' : '1' }} alt="Instagram" />
+          <img src={Insta} style={{ width: '3rem', height: '3rem', opacity: isHovered === 'Insta' ? '0.4' : '1' }} alt="Instagram" />
         </a>
       </div>
     </>
