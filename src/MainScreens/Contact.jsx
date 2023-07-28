@@ -12,6 +12,7 @@ export default function Contact() {
         border: '5px solid #ccc',
         borderRadius: '20px',
         marginTop: '0px',
+        overflow: 'auto'
       };
     
       const labelStyle = {
