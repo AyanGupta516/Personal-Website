@@ -1,7 +1,7 @@
 import React from 'react'
 export default function AboutMe() {
-    const headingstyle = {color: '#BB8FCE', fontSize: '2rem'}
-    const paragraphstyle = {color: 'lightgrey', padding: '.25rem'}
+    const headingstyle = {color: '#BB8FCE', fontSize: '1.5rem', height: 'auto', width: 'auto'}
+    const paragraphstyle = {color: 'lightgrey', padding: '.25rem', height: 'auto', width: 'auto'}
     const cardStyle = {
         display: 'inline-block',
         borderRadius: '20px',
