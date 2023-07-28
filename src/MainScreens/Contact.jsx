@@ -5,10 +5,10 @@ import emailjs from 'emailjs-com';
 export default function Contact() {
     const [isHovered, setIsHovered] = useState(false)
     const formStyle = {
-        width: '500px',
-        height: '600px',
+        width: '35vw',
+        height: '75vh',
         margin: '0 auto',
-        padding: '20px',
+        padding: '1.25rem',
         border: '5px solid #ccc',
         borderRadius: '20px',
         marginTop: '0px',
@@ -16,27 +16,27 @@ export default function Contact() {
     
       const labelStyle = {
         display: 'block',
-        marginBottom: '5px',
-        fontSize: '18px',
+        marginBottom: '.5rem',
+        fontSize: '1.25rem',
         fontWeight: 'bold',
         color: '#BB8FCE'
       };
     
       const inputStyle = {
         width: '75%',
-        padding: '10px',
-        marginBottom: '30px',
+        padding: '.5rem',
+        marginBottom: '2rem',
         border: '1px solid #ccc',
         borderRadius: '5px',
       };
     
       const textareaStyle = {
         width: '75%',
-        padding: '10px',
-        marginBottom: '15px',
+        padding: '.5rem',
+        marginBottom: '1.5rem',
         border: '1px solid #ccc',
         borderRadius: '5px',
-        height: '145px',
+        height: '20vh',
         resize: 'none'
       };
     
@@ -48,8 +48,8 @@ export default function Contact() {
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
-        fontSize: '16px',
-        marginTop: '15px'
+        fontSize: '1rem',
+        marginTop: '.5rem'
       };
 
     const form = useRef()
@@ -79,7 +79,7 @@ export default function Contact() {
     };
     return (
     <>
-    <h1 style = {{color:'#3BBA9C', fontSize:'64px', fontWeight: 'bold', marginTop: '10%', justifyContent: 'center', display: 'flex'}}> Contact Me!</h1>
+    <h1 style = {{color:'#3BBA9C', fontSize:'3.5rem', fontWeight: 'bold', marginTop: '10%', justifyContent: 'center', display: 'flex'}}> Contact Me!</h1>
         <div style = {formStyle}>
         <form ref = {form} onSubmit = {sendEmail}>
         <div>
