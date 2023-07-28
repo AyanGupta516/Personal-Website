@@ -79,7 +79,7 @@ export default function Contact() {
     };
     return (
     <>
-    <h1 style = {{color:'#3BBA9C', fontSize:'64px', fontWeight: 'bold', marginTop: '7%', justifyContent: 'center', display: 'flex', marginTop: '50px'}}> Contact Me!</h1>
+    <h1 style = {{color:'#3BBA9C', fontSize:'64px', fontWeight: 'bold', marginTop: '10%', justifyContent: 'center', display: 'flex'}}> Contact Me!</h1>
         <div style = {formStyle}>
         <form ref = {form} onSubmit = {sendEmail}>
         <div>

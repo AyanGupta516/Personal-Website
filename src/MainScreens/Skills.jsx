@@ -14,7 +14,7 @@ import TSLogo from '../assets/typescript.svg'
 export default function Skills() {
     const [isHovered, setIsHovered] = useState(null)
     const textstyle = {fontWeight: 'bold', color: 'white', fontSize: '1.75rem'}
-    const imagestyle = {width: '50%', height: '50%', justifyContent: 'center', paddingTop: '3.5rem', margin: 'auto', alignItems: 'center'}
+    const imagestyle = {width: '50%', height: 'auto', justifyContent: 'center', paddingTop: '3.5rem', margin: 'auto', alignItems: 'center'}
     const imagesRow1 = [
         {id: 1, src: PythonLogo, alt : 'Python', text: 'Python', link: 'https://www.python.org/'},
         {id: 2, src: JavaLogo, alt : 'Java', text: 'Java', link: 'https://www.java.com/en/'},
@@ -39,17 +39,17 @@ export default function Skills() {
             <h1 style = {{display: 'flex', color:'#3BBA9C', fontSize: '3rem', fontWeight: 'bold', justifyContent: 'center', borderBottom: 'solid', width: '75%', paddingBottom: '1rem', textAlign: 'center', marginTop: '3rem'}}>
                 Skills
             </h1>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px'}}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px', flexWrap: 'wrap'}}>
                 {imagesRow1.map((image) => (
                 <a href = {image.link} target="_blank" style = {{margin: '0px'}}>
-                    <div key = {image.id} style = {{border: 'dotted', height: '15.75rem', width: '15.75rem', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', opacity: isHovered === image.alt ? '.65' : '1' }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>
+                    <div key = {image.id} style = {{border: 'dotted', alignItems: 'center', display: 'flex', height: '15.75rem', width: '15.75rem', flexDirection: 'column', justifyContent: 'center', opacity: isHovered === image.alt ? '.65' : '1' }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>
                         <img src ={image.src} alt = {image.alt} style = {imagestyle}/>
                         <p style = {textstyle}> {image.text} </p>
                     </div>
                 </a>
                 ))}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px'}}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px',flexWrap: 'wrap' }}>
                 {imagesRow2.map((image) => (
                 <a href = {image.link} target="_blank" style = {{margin: '0px'}}>
                     <div key = {image.id} style = {{border: 'dotted', height: '15.75rem', width: '15.75rem', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center',  opacity: isHovered === image.alt ? '.65' : '1'  }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>
@@ -59,7 +59,7 @@ export default function Skills() {
                 </a>
                 ))}
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px'}}>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px', flexWrap: 'wrap'}}>
                 {imagesRow3.map((image) => (
                 <a href = {image.link} target="_blank" style = {{margin: '0px'}}>
                     <div key = {image.id} style = {{border: 'dotted', height: '15.75rem', width: '15.75rem', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center',  opacity: isHovered === image.alt ? '.65' : '1'  }} onMouseEnter={() => setIsHovered(image.alt)} onMouseLeave={() => setIsHovered(null)}>

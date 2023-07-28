@@ -9,7 +9,7 @@ export default function Experience() {
         setIsHovered(tab)
     }
     return (
-    <div style = {{height: '100%', overflow: 'auto'}}>
+    <div style = {{}}>
         <h1 style = {{color: "#3BBA9C", fontWeight:'bold', fontSize: '2rem', display: 'flex', alignContent: 'center', flexDirection: 'column', marginTop: '3.5rem'}}> Experience </h1>
         <div style = {{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingLeft: '2.5rem', paddingRight: '2.5rem'}}>
             <NavLink  to = '/Experience/UHResearch'style = {{display: 'block', borderRadius: '1.75rem', padding: '1rem', marginBottom: '2rem', backgroundColor: '#454545', transition: 'transform 0.1s ease', transform: HoveredTab === 'UH' ? 'scale(1.1)' : 'scale(1)', width: '650px'}} onMouseEnter={() => HandleHovered("UH")} onMouseLeave={() => setIsHovered(null)} >
