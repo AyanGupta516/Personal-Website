@@ -1,10 +1,10 @@
 import React from 'react'
 export default function UTResearch() {
     return (
-        <div style = {{display: 'flex', flexDirection: 'column', aligItems: 'center', 'alignItems': 'center'}}>
-            <h1 style = {{color: '#3BBA9C', width: '60vw', fontSize: '3rem', marginTop: '-2.5%'}}> Galaxy Classification Research </h1>
+        <div style = {{display: 'flex', flexDirection: 'column', aligItems: 'center', 'alignItems': 'center', marginBottom: '3%'}}>
+            <h1 style = {{color: '#3BBA9C', width: '60vw', fontSize: '2.75rem'}}> Galaxy Classification Research </h1>
             <div style = {{width: '90vw', marginTop: '-2.5%'}}>
-                <h1 style = {{color: '#BB8FCE', fontSize: '2rem', textAlign: 'left', marginTop: '4%', borderBottom: 'solid', width: '21vw'}}> Summer 2023 Work </h1>
+                <h1 style = {{color: '#BB8FCE', fontSize: '2rem', textAlign: 'left', marginTop: '4%', borderBottom: 'solid', width: '22vw'}}> Summer 2023 Work </h1>
                 <ul style = {{textAlign: 'left', listStyle: 'disc', marginLeft: '-2.5%', width: '82.5vw', marginTop: '2%'}}>
                     <li style = {{color: 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> Furtherned my knowledge of astronomical concepts through SDSS explorations, readings, and online courses</li>
                     <li style = {{color: 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> Built an intermediate understanding of ML through Stanford's Machine Learning Specialization CourseEra course </li>
