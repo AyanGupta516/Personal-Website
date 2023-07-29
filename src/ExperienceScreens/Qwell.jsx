@@ -4,8 +4,8 @@ const QwellPresentation = () => {
       <div
         style={{
           position: 'relative',
-          width: '700px',
-          height: 0,
+          width: '45vw',
+          height: 'auto',
           paddingTop: '56.2500%',
           paddingBottom: 0,
           boxShadow: '0 2px 8px 0 rgba(63, 69, 81, 0.16)',
@@ -37,13 +37,13 @@ const QwellPresentation = () => {
   };
 export default function Qwell() {
     return (
-    <>
-    <h1 style = {{color: '#3BBA9C', position: 'absolute', top: '7.5%', left:'50%', transform: 'translateX(-50%)'}}> Qwell </h1>
-    <p  style = {{color: 'white', position: 'absolute', top: '20.5%', left:'50%', transform: 'translateX(-50%)', fontSize: '18px'}}> Qwell is an Austin based non-profit that connects LGBTQ+ members to local friendly businesses. As part of TXConvergent, our team helped build a mobile application for them using React Native and SupaBase for development and Figma for design </p>
-    <div style = {{marginTop: '250px'}}>
+    <div style = {{display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center' }}>
+    <h1 style = {{color: '#3BBA9C', marginTop: '0%'}}> Qwell </h1>
+    <p  style = {{color: 'white', fontSize: '1.2rem', width: '50vw', marginTop: '0%'}}> Qwell is an Austin based non-profit that connects LGBTQ+ members to local friendly businesses. As part of TXConvergent, our team helped build a mobile application for them using React Native and SupaBase for development and Figma for design </p>
+    <div style = {{marginTop: '2.5%'}}>
         <QwellPresentation/>
+      </div>
     </div>
-    </>
     )
 }
 
