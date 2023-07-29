@@ -2,7 +2,7 @@ import React from 'react'
 export default function UTResearch() {
     return (
         <div style = {{display: 'flex', flexDirection: 'column', aligItems: 'center', 'alignItems': 'center', marginBottom: '3%'}}>
-            <h1 style = {{color: '#3BBA9C', width: '60%', fontSize: '2.75rem'}}> Galaxy Classification Research </h1>
+            <h1 style = {{color: '#3BBA9C', width: '60%', fontSize: '3rem'}}> Galaxy Classification Research </h1>
             <div style = {{width: '90vw', marginTop: '-2.5%'}}>
                 <h1 style = {{color: '#BB8FCE', fontSize: '2rem', textAlign: 'left', marginTop: '4%', borderBottom: 'solid', width: '24%'}}> Summer 2023 Work </h1>
                 <ul style = {{textAlign: 'left', listStyle: 'disc', paddingLeft: '2.5%', width: '82.5%', marginTop: '2%'}}>
