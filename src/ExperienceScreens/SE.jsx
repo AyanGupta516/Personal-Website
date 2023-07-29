@@ -12,7 +12,7 @@ export default function SE() {
   const headingStyle = {
     color: '#3BBA9C',
     fontSize: '3rem', 
-    marginTop: '-10%',
+    marginTop: '-17.5%',
     width: '100%', 
     textAlign: 'center',
   };
