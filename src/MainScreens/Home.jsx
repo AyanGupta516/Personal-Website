@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import Insta from '../assets/Insta.svg';
 import Linkedin from '../assets/Linkedin.svg';
 import GitHub from '../assets/github.svg';
-
 export default function Home() {
   const [isHovered, setIsHovered] = useState(null);
 
