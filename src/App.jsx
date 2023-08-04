@@ -14,11 +14,14 @@ import SE from './ExperienceScreens/SE'
 import UTResearch from './ExperienceScreens/UTResearch'
 import UHResearch from './ExperienceScreens/UHResearch'
 import Tennis from './ExperienceScreens/Tennis'
-
+import AppProvider from './AppContext';
+import { AppContext } from './AppContext';
+import { useContext} from 'react';
 function App() {
   return (
-  <>
+  <div>
     <BrowserRouter>
+    <AppProvider>
       <UpperNavigationBar/>
       <Routes>
           <Route path = '/' element = {<Home/>} />
@@ -34,9 +37,9 @@ function App() {
           <Route path = '/Experience/Hackathon' element = {<Hackathon/>} />
           <Route path = '/Experience/Tennis' element = {<Tennis/>} />
       </Routes>
-      
+    </AppProvider>
     </BrowserRouter>
-    </>
+    </div>
   )
 }
 

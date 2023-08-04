@@ -1,6 +1,16 @@
 import React from 'react';
-
+import { AppContext } from '../AppContext';
+import { useContext, useEffect} from 'react';
 export default function SE() {
+  const [LightMode] = useContext(AppContext)
+
+    useEffect(() => {
+      if (LightMode) {
+        document.body.classList.add('light-mode');
+      } else {
+        document.body.classList.remove('light-mode');
+      }
+    }, [LightMode]);
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -10,7 +20,7 @@ export default function SE() {
   };
 
   const headingStyle = {
-    color: '#3BBA9C',
+    color: LightMode ? '#5596e6': '#3BBA9C',
     fontSize: '3rem', 
     marginTop: '-17.5%',
     width: '100%', 
@@ -27,7 +37,7 @@ export default function SE() {
   };
 
   const listItemStyle = {
-    color: 'lightgrey',
+    color: LightMode ? 'black' : 'lightgrey',
     fontSize: '1.25rem',
     marginBottom: '3.5%',
   };

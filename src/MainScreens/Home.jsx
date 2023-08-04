@@ -3,21 +3,33 @@ import { NavLink } from 'react-router-dom';
 import Insta from '../assets/Insta.svg';
 import Linkedin from '../assets/Linkedin.svg';
 import GitHub from '../assets/github.svg';
+import { AppContext } from '../AppContext';
+import { useContext, useEffect} from 'react';
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(null);
+  const [LightMode] = useContext(AppContext)
 
+  useEffect(() => {
+    if (LightMode) {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  }, [LightMode]);
+
+
+  const [isHovered, setIsHovered] = useState(null);
   const buttonStyleWithoutHover = {
     color: 'black',
     fontSize: '1.25rem',
     borderRadius: '20px',
     padding: '1rem 1.5rem',
     border: 'solid',
-    backgroundColor: '#3BBA9C',
+    backgroundColor: LightMode ? '#5596e6' : '#3BBA9C',
   };
 
   const buttonStyleWithHover = {
     ...buttonStyleWithoutHover,
-    backgroundColor: '#6EE5CD',
+    backgroundColor: LightMode ? '#69AAFA': '#6EE5CD',
   };
 
   const mouseOver = (tab) => {
@@ -32,12 +44,12 @@ export default function Home() {
 
   return (
     <>
-      <h1 style={{ color: 'white', fontSize: '4rem', marginTop: '0', fontWeight: 'bold' }}>
+      <h1 style={{color: LightMode ? 'black' : 'white', fontSize: '4rem', marginTop: '0', fontWeight: 'bold' }}>
         Hi, my name is Ayan.
       </h1>
       <h2
         style={{
-          color: '#3BBA9C',
+          color: LightMode ? '#5596e6' : '#3BBA9C',
           fontSize: '3rem',
           borderBottom: 'solid 2px',
           paddingBottom: '1.5rem', // Adjusted padding to maintain the same size visually
@@ -45,14 +57,14 @@ export default function Home() {
           marginTop: '-1.875rem', // Adjusted margin to maintain the same size visually
         }}
       >
-        I Study CS & Math <a href="https://www.utexas.edu/" style={{ color: '#3BBA9C', fontWeight: 'bold' }}>
+        I Study CS & Math <a href="https://www.utexas.edu/" style={{color: LightMode ? '#5596e6' : '#3BBA9C', fontWeight: 'bold' }}>
           @ UT-Austin
         </a>
       </h2>
-      <h1 style={{ color: 'white', fontSize: '1.25rem', marginTop: '-1.25rem', fontWeight: 'bold', textAlign: 'center' }}>
+      <h1 style={{color: LightMode ? 'black' : 'white', fontSize: '1.25rem', marginTop: '-1.25rem', fontWeight: 'bold', textAlign: 'center' }}>
         My current interests lie in Machine Learning, Backend Software Development, and Data Science.
       </h1>
-      <h1 style={{ color: 'white', fontSize: '1.25rem', marginTop: '1.25rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '2.5rem' }}>
+      <h1 style={{color: LightMode ? 'black' : 'white', fontSize: '1.25rem', marginTop: '1.25rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '2.5rem' }}>
         Reach me here: ayan.x.gupta@gmail.com
       </h1>
       <NavLink

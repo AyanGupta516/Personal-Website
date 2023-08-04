@@ -1,25 +1,38 @@
 import React from 'react'
+import { AppContext } from '../AppContext';
+import { useContext, useEffect} from 'react';
 export default function AboutMe() {
-    const headingstyle = {color: '#BB8FCE', fontSize: '1.5rem', height: 'auto', width: 'auto'}
-    const paragraphstyle = {color: 'lightgrey', padding: '.25rem', height: 'auto', width: 'auto'}
+    const [LightMode] = useContext(AppContext)
+
+    useEffect(() => {
+      if (LightMode) {
+        document.body.classList.add('light-mode');
+      } else {
+        document.body.classList.remove('light-mode');
+      }
+    }, [LightMode]);
+
+
+    const headingstyle = {color: LightMode ? '#e65596': '#BB8FCE', fontSize: '1.5rem', height: 'auto', width: 'auto'}
+    const paragraphstyle = {color: LightMode ? 'black': 'lightgrey', padding: '.25rem', height: 'auto', width: 'auto'}
     const cardStyle = {
         display: 'inline-block',
         borderRadius: '20px',
-        backgroundColor: '#454545',
+        backgroundColor: LightMode ? '#D3D3D3' :'#454545',
         width: '40%',
         margin: '1rem',
         padding: '.5rem',
       };
-    return (
+    return (     
     <>
         <div>
-            <h1 style = {{color: '#3BBA9C', paddingTop: '1.25rem'}}> About Me </h1>
-            <p style = {{color: 'white', fontSize: '1.25rem', textAlign: 'center', marginTop: '-1rem', display: 'flex', justifyContent: 'center'}}> I'm a student at UT-Austin studying Computer Science & Mathematics. What I enjoy most about programming is the 
+            <h1 style = {{color: LightMode ? '#5596e6' : '#3BBA9C', paddingTop: '1.25rem'}}> About Me </h1>
+            <p style = {{color: LightMode ? 'black': 'white', fontSize: '1.25rem', textAlign: 'center', marginTop: '-1rem', display: 'flex', justifyContent: 'center'}}> I'm a student at UT-Austin studying Computer Science & Mathematics. What I enjoy most about programming is the 
                 ability to take complex tasks and break them into small pieces, to create cool things or solve interesting problems. I am 
                 most interested in backend algorithimic design as well as Machine Learning but also enjoy the process of constructing a web
                 or mobile application. My goal right now is to learn as much as possible and to continue exploring my interests as much as I can. 
             </p>
-            <h1 style = {{color: '#3BBA9C', fontSize: '2rem', textAlign: 'left', marginTop: '1.25rem'}}> Academic & Personal Interests </h1>
+            <h1 style = {{color: LightMode ? '#5596e6' : '#3BBA9C', fontSize: '2rem', textAlign: 'left', marginTop: '1.25rem'}}> Academic & Personal Interests </h1>
         </div>
         <div> 
         <div style = {cardStyle}>

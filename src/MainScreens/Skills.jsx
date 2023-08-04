@@ -11,9 +11,19 @@ import CSSLogo from '../assets/css.svg'
 import DSLogo from '../assets/anaconda.svg'
 import GitLogo from '../assets/git.svg'
 import TSLogo from '../assets/typescript.svg'
+import { AppContext } from '../AppContext';
+import { useContext, useEffect} from 'react';
 export default function Skills() {
+    const [LightMode] = useContext(AppContext)
     const [isHovered, setIsHovered] = useState(null)
-    const textstyle = {fontWeight: 'bold', color: 'white', fontSize: '1.75rem'}
+    useEffect(() => {
+        if (LightMode) {
+          document.body.classList.add('light-mode');
+        } else {
+          document.body.classList.remove('light-mode');
+        }
+      }, [LightMode]);
+    const textstyle = {fontWeight: 'bold', color: LightMode ? 'black' :'white', fontSize: '1.75rem'}
     const imagestyle = {width: '50%', height: 'auto', justifyContent: 'center', paddingTop: '3.5rem', margin: 'auto', alignItems: 'center'}
     const imagesRow1 = [
         {id: 1, src: PythonLogo, alt : 'Python', text: 'Python', link: 'https://www.python.org/'},
@@ -36,7 +46,7 @@ export default function Skills() {
     return (
         <>
            <div style = {{height: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <h1 style = {{display: 'flex', color:'#3BBA9C', fontSize: '3rem', fontWeight: 'bold', justifyContent: 'center', borderBottom: 'solid', width: '75%', paddingBottom: '1rem', textAlign: 'center', marginTop: '3rem'}}>
+            <h1 style = {{display: 'flex', color: LightMode ? '#5596e6' : '#3BBA9C', fontSize: '3rem', fontWeight: 'bold', justifyContent: 'center', borderBottom: 'solid', width: '75%', paddingBottom: '1rem', textAlign: 'center', marginTop: '3rem'}}>
                 Skills
             </h1>
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0px', flexWrap: 'wrap'}}>

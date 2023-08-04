@@ -1,8 +1,18 @@
 import React, {useRef} from 'react'
 import {useState} from 'react'
 import emailjs from 'emailjs-com';
-
+import { AppContext } from '../AppContext';
+import { useContext, useEffect} from 'react';
 export default function Contact() {
+    const [LightMode] = useContext(AppContext)
+    useEffect(() => {
+      if (LightMode) {
+        document.body.classList.add('light-mode')
+      }
+      else {
+        document.body.classList.remove('light-mode')
+      }
+    },[LightMode])
     const [isHovered, setIsHovered] = useState(false)
     const formStyle = {
         width: '35vw',
@@ -20,7 +30,7 @@ export default function Contact() {
         marginBottom: '.5rem',
         fontSize: '1.25rem',
         fontWeight: 'bold',
-        color: '#BB8FCE'
+        color: LightMode ? '#e65596' : '#BB8FCE'
       };
     
       const inputStyle = {
@@ -43,7 +53,7 @@ export default function Contact() {
     
       const buttonStyle = {
         padding: '10px 20px',
-        backgroundColor: isHovered ? '#6EE5CD' : '#3BBA9C',  
+        backgroundColor: LightMode ? (isHovered ? '#69AAFA' : '#5596e6'): (isHovered ? '#6EE5CD' : '#3BBA9C'),  
         color: '#fff',
         fontWeight: 'bold',
         border: 'none',
@@ -80,7 +90,7 @@ export default function Contact() {
     };
     return (
     <>
-    <h1 style = {{color:'#3BBA9C', fontSize:'3.5rem', fontWeight: 'bold', marginTop: '10%', justifyContent: 'center', display: 'flex'}}> Contact Me!</h1>
+    <h1 style = {{color: LightMode ? '#5596e6': '#3BBA9C', fontSize:'3.5rem', fontWeight: 'bold', marginTop: '10%', justifyContent: 'center', display: 'flex'}}> Contact Me!</h1>
         <div style = {formStyle}>
         <form ref = {form} onSubmit = {sendEmail}>
         <div>

@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-
+import React from 'react';
+import moon from '../assets/moon.svg'
+import sun from '../assets/sun.svg'
+import { AppContext } from '../AppContext';
+import { useContext} from 'react';
 const ToggleSwitch = () => {
-  const [LightMode, setLightMode] = useState(false);
-
+  const [LightMode, setLightMode] = useContext(AppContext)
   const toggleSwitch = () => {
     setLightMode(!(LightMode))
   };
@@ -13,7 +15,6 @@ const ToggleSwitch = () => {
     borderRadius: '30px',
     backgroundColor: LightMode ? '#B8E2F2' : '#222222',  
     position: 'relative',
-    cursor: 'pointer',
   };
 
   const sliderStyles = {
@@ -21,16 +22,17 @@ const ToggleSwitch = () => {
     height: '26px',
     borderRadius: '50%',
     backgroundColor: LightMode ? '#FFF' :'#555555',
-    backgroundImage: 'url(../assets/C++.svg)',
+    backgroundImage: LightMode ? `url(${sun})`: `url(${moon})`,
     position: 'absolute',
     top: '2px',
     left: LightMode ? '32px' : '2px',
     transition: 'left .7s ease',
+    cursor: 'pointer',
   };
 
   return (
-    <div style={switchStyles} onClick={toggleSwitch}>
-      <div style={sliderStyles} />
+    <div style={switchStyles} >
+      <div style={sliderStyles} onClick={toggleSwitch} />
     </div>
   );
 };
