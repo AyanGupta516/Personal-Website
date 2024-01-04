@@ -14,6 +14,7 @@ import SE from './ExperienceScreens/SE'
 import UTResearch from './ExperienceScreens/UTResearch'
 import UHResearch from './ExperienceScreens/UHResearch'
 import Tennis from './ExperienceScreens/Tennis'
+import InternshipPage from './MainScreens/Internships'; 
 import AppProvider from './AppContext';
 import { AppContext } from './AppContext';
 import { useContext} from 'react';
@@ -26,16 +27,10 @@ function App() {
       <Routes>
           <Route path = '/' element = {<Home/>} />
           <Route path = '/AboutMe' element = {<AboutMe/>} />
-          <Route path = '/Experience' element = {<Experience/>} />
+          <Route path = '/Projects' element = {<Experience/>} />
           <Route path = '/Skills' element = {<Skills/>} />
           <Route path = '/Contact' element = {<Contact/>} />
-          <Route path = '/Experience/UHResearch' element = {<UHResearch/>} />
-          <Route path = '/Experience/Qwell' element = {<Qwell/>} />
-          <Route path = '/Experience/UTResearch' element = {<UTResearch/>} />
-          <Route path = '/Experience/SE' element = {<SE/>} />
-          <Route path = '/Experience/Huffman' element = {<Huffman/>} />
-          <Route path = '/Experience/Hackathon' element = {<Hackathon/>} />
-          <Route path = '/Experience/Tennis' element = {<Tennis/>} />
+          <Route path = '/Experience' element = {<InternshipPage/>} />
       </Routes>
     </AppProvider>
     </BrowserRouter>

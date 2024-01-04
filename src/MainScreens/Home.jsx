@@ -5,6 +5,8 @@ import Linkedin from '../assets/Linkedin.svg';
 import GitHub from '../assets/github.svg';
 import { AppContext } from '../AppContext';
 import { useContext, useEffect} from 'react';
+import Face from '../assets/My_Image.jpeg';
+import Typed from 'react-typed';
 export default function Home() {
   const [LightMode] = useContext(AppContext)
 
@@ -24,7 +26,10 @@ export default function Home() {
     borderRadius: '20px',
     padding: '1rem 1.5rem',
     border: 'solid',
+    margin: '10px 0', // Add space above and below NavLink
     backgroundColor: LightMode ? '#5596e6' : '#3BBA9C',
+    marginTop: '100px'
+
   };
 
   const buttonStyleWithHover = {
@@ -40,41 +45,60 @@ export default function Home() {
     setIsHovered(null);
   };
 
-  const ButtonStyle = isHovered === 'Contact' ? buttonStyleWithHover : buttonStyleWithoutHover;
+  const imageStyle = {
+    borderRadius: '50%',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    border: '6px solid #000', // Set the border color and width as per your requirement
+  };
+
+  const containerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '20px',
+  };
+
+  const textContainerStyle = {
+    paddingTop: '30px',
+    paddingBottom: '60px',
+    paddingLeft: '45px',
+    paddingRight: '200px',
+    textAlign: 'left',
+  };
+
+  const ButtonStyle = isHovered === 'Experience' ? buttonStyleWithHover : buttonStyleWithoutHover;
 
   return (
     <>
-      <h1 style={{color: LightMode ? 'black' : 'white', fontSize: '4rem', marginTop: '0', fontWeight: 'bold' }}>
-        Hi, my name is Ayan.
-      </h1>
-      <h2
-        style={{
-          color: LightMode ? '#5596e6' : '#3BBA9C',
-          fontSize: '3rem',
-          borderBottom: 'solid 2px',
-          paddingBottom: '1.5rem', // Adjusted padding to maintain the same size visually
-          fontWeight: 'bold',
-          marginTop: '-1.875rem', // Adjusted margin to maintain the same size visually
-        }}
-      >
-        I Study CS & Math <a href="https://www.utexas.edu/" style={{color: LightMode ? '#5596e6' : '#3BBA9C', fontWeight: 'bold' }}>
-          @ UT-Austin
-        </a>
-      </h2>
-      <h1 style={{color: LightMode ? 'black' : 'white', fontSize: '1.25rem', marginTop: '-1.25rem', fontWeight: 'bold', textAlign: 'center' }}>
-        My current interests lie in Machine Learning, Backend Software Development, and Data Science.
-      </h1>
-      <h1 style={{color: LightMode ? 'black' : 'white', fontSize: '1.25rem', marginTop: '1.25rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '2.5rem' }}>
-        Reach me here: ayan.x.gupta@gmail.com
-      </h1>
-      <NavLink
-        to="/Contact"
-        onMouseEnter={() => mouseOver('Contact')}
-        onMouseLeave={notmouseOver}
-        style={ButtonStyle}
-      >
-        Contact me
-      </NavLink>
+      <div style={containerStyle}>
+        <div style={textContainerStyle}>
+          <h2 style = {{borderBottom: '2px solid #FFF', paddingBottom: '20px', fontSize: '24px'}}>HELLO MY NAME IS</h2>
+          <Typed
+            strings={['Ayan Gupta']}
+            typeSpeed={60}
+            backSpeed={80}
+            loop={false}
+            showCursor={false}
+          >
+            <h1 style={{ fontSize: '84px', marginTop: '-5px' }}></h1>
+          </Typed>
+          <h3 style = {{fontSize: '20px', marginTop: '-35px'}}>CS & MATHEMATICS STUDENT @ <a href = 'https://www.utexas.edu/' target='_blank' rel='noopener noreferrer' style={{ color: 'inherit', fontWeight: 'bold' }}> UT-AUSTIN</a></h3>
+          <div style={{ marginTop: '50px' }}>
+            <NavLink
+              to="/Projects"
+              onMouseEnter={() => mouseOver('Experience')}
+              onMouseLeave={notmouseOver}
+              style={ButtonStyle}
+            >
+              VIEW MY WORK
+            </NavLink>
+          </div>
+        </div>
+        <div>
+          <img src={Face} alt="Ayan Gupta" style={imageStyle} />
+        </div>
+      </div>
+      
       <div
         style={{
           display: 'flex',
