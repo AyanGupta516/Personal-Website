@@ -23,6 +23,14 @@ export default function BasicCard({title, imageURL, dates, description, modalDes
     setModalOpen(false);
   };
 
+  const [isHovered, setIsHovered] = useState(null)
+  const handleHovered = (tab) => {
+      setIsHovered(tab)
+  }
+  const removehover = () => {
+      setIsHovered(null)
+  }
+
 
   const renderMedia = () => {
     if (type === 'image') {
@@ -147,7 +155,7 @@ export default function BasicCard({title, imageURL, dates, description, modalDes
         </div>
       </CardContent>
       <CardContent orientation="horizontal" >
-        <Button  onClick = {handleLearnMoreClick} style = {{color: '#5596e6', border: 'solid', padding: '.5rem', borderRadius: '10px', backgroundColor: '#eaf4fd'}}>
+        <Button  onClick = {handleLearnMoreClick} onMouseEnter={() => handleHovered(title)}  onMouseLeave={() => removehover()} style = {{color: (isHovered === title) ? '#a6c7f1' : '#5596e6', border: 'solid', padding: '.5rem', borderRadius: '10px', backgroundColor: '#eaf4fd'}}>
           Learn More 
         </Button>
       </CardContent>

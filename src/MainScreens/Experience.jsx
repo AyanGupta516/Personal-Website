@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { AppContext } from '../AppContext';
-import { useContext, useEffect} from 'react';
 
 import Qwell from '../assets/QwellSS.png'
 import Galaxy from '../assets/Galaxy.png'
@@ -66,17 +64,10 @@ export default function Experience() {
         modalDescription: ' During High School, my interest in tennis and mathematics spurred me to pursue a project between the two. Using Jeff Sackmans database of all professional match information from 2013, I attempted to plot the performance of my favorite tennis players using different metrics. Using pandas, matplotlib, and Jupyter Notebook, I analyzed how the performance of players changed over time and in respect to different factors such as court type, constructing features such as serve percentage and breakpoint percentage, and splicing the large dataset into smaller datasets.'
       }
 
-    const [LightMode] = useContext(AppContext)
-    useEffect(() => {
-        if (LightMode) {
-          document.body.classList.add('light-mode');
-        } else {
-          document.body.classList.remove('light-mode'); 
-        }
-      }, [LightMode]);
+   
     return (
     <div style = {{}}>
-        <h1 style = {{color: LightMode ? '#5596e6' : "#3BBA9C", fontWeight:'bold', fontSize: '2rem', display: 'flex', alignContent: 'center', flexDirection: 'column', marginTop: '3.5rem', fontSize: '40px'}}> Projects </h1>
+        <h1 style = {{color: "#3BBA9C", fontWeight:'bold', fontSize: '2rem', display: 'flex', alignContent: 'center', flexDirection: 'column', marginTop: '3.5rem', fontSize: '40px'}}> Projects </h1>
         <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', marginTop: '2rem', marginLeft: '8rem', marginRight: '8rem'}}>
         <Card {...QwellData} imageURL={Qwell} type = 'Qwell'/>
         <Card {...UTResearch} imageURL = {Galaxy} media = {ResearchPaper} type = 'ResearchImage'/>
