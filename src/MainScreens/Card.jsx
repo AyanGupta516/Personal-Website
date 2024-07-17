@@ -43,6 +43,16 @@ export default function BasicCard({title, imageURL, dates, description, modalDes
           />
       );
     }
+    else if (type === 'health') {
+      return (
+        <img
+        style={{marginLeft: '30%', height: '75%', width: '50%'}}
+        src={media}
+        loading="lazy"
+        alt=""
+        />
+    );
+    }
     else if (type === 'ResearchImage') {
       return (
         <img
@@ -119,6 +129,40 @@ export default function BasicCard({title, imageURL, dates, description, modalDes
           />
         )
     }
+    else if (type === 'Cura') {
+      return (
+        <div style={{
+          position: 'relative', 
+          width: '100%', 
+          height: 0, 
+          paddingTop: '56.25%', 
+          paddingBottom: 0, 
+          boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', 
+          marginTop: '1.6em', 
+          marginBottom: '0.9em', 
+          overflow: 'hidden', 
+          borderRadius: '8px', 
+          willChange: 'transform'
+        }}>
+          <iframe 
+            loading="lazy" 
+            style={{
+              position: 'absolute', 
+              width: '100%', 
+              height: '100%', 
+              top: 0, 
+              left: 0, 
+              border: 'none', 
+              padding: 0, 
+              margin: 0
+            }}
+            src="https://www.canva.com/design/DAGDFWFyJck/whiLNdQ3-fKoISHiMpU9UQ/view?embed" 
+            allowFullScreen 
+          >
+          </iframe>
+        </div>
+      )
+    }
   }
 
 
@@ -130,14 +174,6 @@ export default function BasicCard({title, imageURL, dates, description, modalDes
       <div>
         <Typography level="title-lg"> {title} </Typography>
         <Typography level="body-sm"> {dates} </Typography>
-        <IconButton
-          aria-label="bookmark Bahamas Islands"
-          variant="plain"
-          color="neutral"
-          size="sm"
-          sx={{ position: 'absolute', top: '0.875rem', right: '0.5rem' }}
-        >
-        </IconButton>
       </div>
       <AspectRatio minHeight="120px" maxHeight="200px">
         <img

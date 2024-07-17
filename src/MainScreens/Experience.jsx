@@ -8,12 +8,16 @@ import HuffmanImage from '../assets/HuffmanImage.png'
 import Card from './Card';
 import SEImage from '../assets/Pipeline.png'
 import TennisImage from '../assets/Tennis_Racket_and_Balls.jpeg'
+import CuraImage from '../assets/Cura.png'
+import fitbitImage from '../assets/fitbit.png'
+
 
 //Modal media
 import HuffImage from '../assets/Huffman.png'
 import ResearchPaper from '../assets/ResearchPaper.png'
 import RadialPlots from '../assets/RadialPlots.png'
 import SELab from '../assets/SE.png'
+import healthkit from '../assets/healthkit.png'
 
 
 
@@ -64,15 +68,33 @@ export default function Experience() {
         modalDescription: ' During High School, my interest in tennis and mathematics spurred me to pursue a project between the two. Using Jeff Sackmans database of all professional match information from 2013, I attempted to plot the performance of my favorite tennis players using different metrics. Using pandas, matplotlib, and Jupyter Notebook, I analyzed how the performance of players changed over time and in respect to different factors such as court type, constructing features such as serve percentage and breakpoint percentage, and splicing the large dataset into smaller datasets.'
       }
 
+      const Cura = {
+        title: "Cura",
+        description: 'An AI based App that curates personalized treatment plans for caregivers to give patients.',
+        dates: 'Jan 2024 - April 2024',
+        modalDescription: ' As part of TXConvergent, we created a React Native Mobile Application for the startup Cura that uses RAG paired with GPT to personalize treatement plans for patients with schizophrenia. The RAG model uses medically approved treatement plans as context for GPT plan personalization. The app has an intuitive UI that allows caregivers to better manage and view the treatement of their patients.'
+      }
+
+      const HealthManagementApp = {
+        title: 'Health Management Application',
+        description: 'An application to streamline the data collection process for a UT Research Study',
+        dates: 'Feb 2024 - April 2024',
+        modalDescription: 'I created Python & Swift Applications that facilitated the transmission of Fitbit & Apple Watch data from study participants to the principal investigator. I used Supabase & Flask to store and retrieve API Authentication tokens, and used Fitbit API to retrieve data. Engineered an intuitive UI in Swift, using the Healthkit Framework to retrieve Apple Watch health data' 
+      }
+
+    
+
    
     return (
     <div style = {{}}>
         <h1 style = {{color: "#3BBA9C", fontWeight:'bold', fontSize: '2rem', display: 'flex', alignContent: 'center', flexDirection: 'column', marginTop: '3.5rem', fontSize: '40px'}}> Projects </h1>
         <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', marginTop: '2rem', marginLeft: '8rem', marginRight: '8rem'}}>
+        <Card {...HealthManagementApp} imageURL = {fitbitImage} media = {healthkit} type = 'health' />
+        <Card {...Cura} imageURL = {CuraImage} type = 'Cura' />
         <Card {...QwellData} imageURL={Qwell} type = 'Qwell'/>
-        <Card {...UTResearch} imageURL = {Galaxy} media = {ResearchPaper} type = 'ResearchImage'/>
+        <Card {...UTResearch} imageURL = {Galaxy} media = {ResearchPaper}  type = 'ResearchImage'/>
         <Card {...Quest} imageURL = {QuestImage} type = 'QuestSlideshow' />
-        <Card {...SE} imageURL = {SEImage} media =  {SELab} type = 'SE'  />
+        <Card {...SE} imageURL = {SEImage} media = {SELab} type = 'SE'  />
         <Card {...Huffman}  imageURL = {HuffmanImage} media = {HuffImage} type = 'image' />
         <Card {...Tennis} imageURL = {TennisImage} media = {RadialPlots} type = 'Tennis' />
         </div>

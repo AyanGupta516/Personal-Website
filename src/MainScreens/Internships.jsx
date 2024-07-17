@@ -7,7 +7,7 @@ const internships = [
     title: 'Hewlett Packards Enterprise',
     cardTitle: 'Software Engineering Intern',
     cardSubtitle: 'Summer 2024',
-    cardDetailedText: 'Incoming SWE Intern at HPE',
+    cardDetailedText: 'SWE Intern for HPE Compute Ops Management.',
     
   },
   {
