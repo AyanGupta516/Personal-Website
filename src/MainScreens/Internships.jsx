@@ -4,10 +4,22 @@ import { Chrono } from "react-chrono";
 
 const internships = [
   {
+    title: 'Texas Convergent',
+    cardTitle: 'Technical Project Lead',
+    cardSubtitle: 'August 2024 - Present',
+    cardDetailedText: 'Technical Project Lead for Jump Finance, a company dedicated to providing financial support for students in West Africa and enhancing the software infrastructure of their universities. Leading a team of 8 developers to build a full stack course registration platform.'
+  },
+  {
+    title: 'University of Texas at Austin',
+    cardTitle: 'Teaching Assistant',
+    cardSubtitle: 'August 2024 - Present',
+    cardDetailedText: 'Teaching Assistant for a Python Programming class at UT-Austin. Supporting a class of 600+ students by teaching and assisting in core programming concepts'
+  },
+  {
     title: 'Hewlett Packards Enterprise',
     cardTitle: 'Software Engineering Intern',
     cardSubtitle: 'Summer 2024',
-    cardDetailedText: 'SWE Intern for HPE Compute Ops Management.',
+    cardDetailedText: 'Worked on implementing frontend features for HPE Compute Ops Mangement Platform. In addition, develped a new FastAPI based Kubernetes microservice to forward UI Error logs to a logging service ',
     
   },
   {

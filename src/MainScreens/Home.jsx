@@ -5,7 +5,7 @@ import Linkedin from '../assets/Linkedin.svg';
 import GitHub from '../assets/github.svg';
 import { AppContext } from '../AppContext';
 import { useContext, useEffect} from 'react';
-import Face from '../assets/My_Image.jpeg';
+import Face from '../assets/Headshot.jpeg';
 import Typed from 'react-typed';
 export default function Home() {
   const [LightMode] = useContext(AppContext)
