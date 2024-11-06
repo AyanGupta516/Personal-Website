@@ -80,7 +80,7 @@ export default function Contact() {
         alert("Please fill out the required fields")
         return
       }
-      emailjs.sendForm('service_3uaopmk', 'template_h0r6x32', form.current, '78z24QiCQL419f772')
+      emailjs.sendForm('service_t3xf91p', 'template_h0r6x32', form.current, '78z24QiCQL419f772')
         .then(() => {
             alert("Email has been Sent")
             form.current.reset()
