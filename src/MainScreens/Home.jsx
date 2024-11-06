@@ -123,7 +123,7 @@ export default function Home() {
           <img src={Linkedin} style={{ width: '3rem', height: '3rem', opacity: isHovered === 'Link' ? '0.4' : '1' }} alt="LinkedIn" />
         </a>
         <a
-          href="https://www.instagram.com/ayangupta516/"
+          href="https://www.instagram.com/ayangupta101/?hl=en"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => mouseOver('Insta')}
