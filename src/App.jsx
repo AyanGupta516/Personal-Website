@@ -9,10 +9,12 @@ import UpperNavigationBar from './MainScreens/UpperNavigationBar'
 import AboutMe from './MainScreens/AboutMe'
 import InternshipPage from './MainScreens/Internships'; 
 import AppProvider from './AppContext';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
   <div>
+    <Analytics/>
     <BrowserRouter>
     <AppProvider>
       <UpperNavigationBar/>
