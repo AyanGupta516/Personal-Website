@@ -5,13 +5,11 @@ import Qwell from '../assets/QwellSS.png'
 import Galaxy from '../assets/Galaxy.png'
 import QuestImage from '../assets/Quest.png'
 import Card from './Card';
-import SEImage from '../assets/Pipeline.png'
-import TennisImage from '../assets/Tennis_Racket_and_Balls.jpeg'
 import CuraImage from '../assets/Cura.png'
 import PintOSImage from '../assets/pintos.png'
 import fitbitImage from '../assets/fitbit.png'
 import NeuralNets from "../assets/NeuralNets.png"
-import Sumo from "../assets/SUMO.png"
+import Sumo from "../assets/sumo.png"
 
 
 

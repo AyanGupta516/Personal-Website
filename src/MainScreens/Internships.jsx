@@ -11,8 +11,8 @@ const internships = [
   {
     title: 'Texas Convergent',
     cardTitle: 'Technical Project Lead',
-    cardSubtitle: 'August 2024 - Present',
-    cardDetailedText: 'Technical Project Lead for Jump Finance, a company dedicated to providing financial support for students in West Africa and enhancing the software infrastructure of their universities. Leading a team of 8 developers to build a full stack course registration platform.'
+    cardSubtitle: 'August 2024 - May 2025',
+    cardDetailedText: 'Technical Project Lead for Jump Finance, supporting student financing and university software infrastructure in West Africa. Leading a team of 8 developers to build a full-stack course registration platform.'
   },
   {
     title: 'University of Texas at Austin',
