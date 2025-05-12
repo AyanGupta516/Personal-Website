@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Typography, Box, Paper, Chip, Divider } from '@mui/material';
+import { Container, Typography, Box, Paper, Chip, Divider, Link } from '@mui/material';
 
 const techStack = [
-  'React Native', 'Flask', 'Supabase', 'Retool', 'PostgreSQL'
+  'React Native', 'FastAPI', 'PostgreSQL', 'ChatGPT API', 'Google Places API'
 ];
 
-const Qwell = () => {
+const QuestProject = () => {
   return (
     <Container maxWidth="md" sx={{ mt: 6, mb: 8 }}>
       <Typography
@@ -16,15 +16,15 @@ const Qwell = () => {
         sx={{ color: '#5596e6', mb: 1 }}
         fontFamily="monospace"
       >
-        Qwell
+        Quest
       </Typography>
 
       <Paper elevation={4} sx={{ p: 4, borderRadius: 3 }}>
         <Typography variant="body1" color="text.secondary" paragraph>
-          Qwell is an Austin-based non-profit that connects LGBTQ+ members with local, inclusive businesses. As part of a cross-functional team of 10 spanning tech, design, and product, I contributed to building a mobile application for the organization.
+          As part of HackTX, my team and I created a React Native mobile application that gives users daily challenges to step out of their comfort zone. We implemented a personalized feed and leaderboard system to gamify the experience and encourage social participation.
         </Typography>
         <Typography variant="body1" color="text.secondary" paragraph>
-          I developed key frontend components using React Native and integrated Flask with Supabase to build and maintain backend services. I also used Retool to design dynamic admin pages, allowing Qwell to efficiently manage business data in real time.
+          Using onboarding responses, we called the ChatGPT API to generate tailored challenges. The Google Places API was integrated to identify nearby locations for completing tasks. Data was stored and managed using FastAPI and PostgreSQL.
         </Typography>
 
         <Divider sx={{ my: 3 }} />
@@ -38,7 +38,21 @@ const Qwell = () => {
           ))}
         </Box>
 
-        {/* Canva Embed */}
+        {/* GitHub Link */}
+        <Box sx={{ mt: 4, textAlign: 'center' }}>
+          <Typography variant="body2" color="text.secondary">
+            View the code on{' '}
+            <Link
+              href="https://github.com/AyanGupta516/Quest"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: '#5596e6', fontWeight: 'bold', textDecoration: 'none' }}
+            >
+              GitHub →
+            </Link>
+          </Typography>
+        </Box>
+
         <Box
           sx={{
             position: 'relative',
@@ -53,7 +67,8 @@ const Qwell = () => {
           }}
         >
           <iframe
-            loading="eager"
+            src="https://docs.google.com/presentation/d/19DyWyPqF6YeVp7Qv8iMvSZc1MfaJD84fBETd430PHCo/embed?start=false&loop=true&delayms=5000"
+            frameBorder="0"
             style={{
               position: 'absolute',
               width: '100%',
@@ -61,18 +76,14 @@ const Qwell = () => {
               top: 0,
               left: 0,
               border: 'none',
-              padding: 0,
-              margin: 0,
             }}
-            src="https://www.canva.com/design/DAFpIqnWXoM/view?embed"
             allowFullScreen
-            title="Qwell Project Presentation"
+            title="Quest Slideshow"
           />
         </Box>
-
       </Paper>
     </Container>
   );
 };
 
-export default Qwell;
+export default QuestProject;

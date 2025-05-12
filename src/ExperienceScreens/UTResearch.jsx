@@ -1,33 +1,72 @@
-import React from 'react'
-import { AppContext } from '../AppContext';
-import { useContext, useEffect} from 'react';
-export default function UTResearch() {
-    const [LightMode] = useContext(AppContext)
+import React from 'react';
+import { Container, Typography, Box, Paper, Chip, Divider, Link } from '@mui/material';
 
-    useEffect(() => {
-      if (LightMode) {
-        document.body.classList.add('light-mode');
-      } else {
-        document.body.classList.remove('light-mode');
-      }
-    }, [LightMode]);
-    return (
-        <div style = {{display: 'flex', flexDirection: 'column', aligItems: 'center', 'alignItems': 'center', marginBottom: '3%'}}>
-            <h1 style = {{color: LightMode ? '#5596e6': '#3BBA9C', width: '60%', fontSize: '3rem'}}> Galaxy Classification Research </h1>
-            <div style = {{width: '90vw', marginTop: '-2.5%'}}>
-                <h1 style = {{color: LightMode ? '#e65596': '#BB8FCE', fontSize: '2rem', textAlign: 'left', marginTop: '4%', borderBottom: 'solid', width: '24%'}}> Summer 2023 Work </h1>
-                <ul style = {{textAlign: 'left', listStyle: 'disc', paddingLeft: '2.5%', width: '82.5%', marginTop: '2%'}}>
-                    <li style = {{color: LightMode ? 'black' : 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> Furtherned my knowledge of astronomical concepts through SDSS explorations, readings, and online courses</li>
-                    <li style = {{color: LightMode ? 'black' : 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> Built an intermediate understanding of ML through Stanford's Machine Learning Specialization CourseEra course </li>
-                    <li style = {{color: LightMode ? 'black' : 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> Developed a research problem to investigate in the fall, familarizing myself with the topic and potential approaches through past academic papers </li>
-                </ul>
-                <h1 style = {{color: LightMode ? '#e65596': '#BB8FCE', fontSize: '2rem', textAlign: 'left', marginTop: '4%', borderBottom: 'solid', width: '18.5%'}}> Fall 2023 Work </h1>
-                <ul style = {{textAlign: 'left', listStyle: 'disc', paddingLeft: '2.5%', width: '82.5%', marginTop: '2%'}}>
-                    <li style = {{color: LightMode ? 'black' : 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> Working collaboratively in a team of three, we are conducting research on the clustering of galaxies based on their emission lines </li>
-                    <li style = {{color: LightMode ? 'black' : 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}>  Our study involves utilizing data from the Sloan Digital Sky Survey (SDSS) to develop a Machine Learning clustering algorithm</li>
-                    <li style = {{color: LightMode ? 'black' : 'lightgrey', fontSize: '1.15rem', marginBottom: '1.25rem'}}> The primary goal of this project is to write a research paper for publication </li>
-                </ul>
-            </div>
-        </div>
-    )
-}
+const techStack = [
+  'TensorFlow', 'Keras', 'Scikit-learn', 'Python'
+];
+
+const UTResearchProject = () => {
+  return (
+    <Container maxWidth="md" sx={{ mt: 6, mb: 8 }}>
+      <Typography
+        variant="h4"
+        align="center"
+        gutterBottom
+        fontWeight="bold"
+        sx={{ color: '#5596e6', mb: 4 }}
+        fontFamily="monospace"
+      >
+        Geometry of Space Research Lab
+      </Typography>
+
+      <Paper elevation={4} sx={{ p: 4, borderRadius: 3 }}>
+        <Typography variant="body1" color="text.secondary" paragraph>
+          My team and I developed both a Dense Neural Network and a Support Vector Machine to classify emission-line galaxies into four distinct types: Seyferts, Star-Forming, Composite, and LINERs. We sourced spectroscopic data from the Sloan Digital Sky Survey and processed it using Python-based ML pipelines.
+        </Typography>
+
+        <Typography variant="body1" color="text.secondary" paragraph>
+          Using TensorFlow, Keras, and Scikit-learn, we trained both models to achieve classification accuracy above 92%. The models provided insights into emission line diagnostics, contributing to more precise galaxy type classification. Our paper was published by the American Astronomical Research Society in March 2024.
+        </Typography>
+
+        <Divider sx={{ my: 3 }} />
+
+        <Typography variant="h6" gutterBottom>
+          Technologies Used
+        </Typography>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
+          {techStack.map((tech, idx) => (
+            <Chip key={idx} label={tech} variant="outlined" sx={{ color: '#3BBA9C', borderColor: '#3BBA9C' }} />
+          ))}
+        </Box>
+
+        {/* Paper & GitHub Links */}
+        <Box sx={{ mt: 4, textAlign: 'center' }}>
+          <Typography variant="body2" color="text.secondary">
+            📄{' '}
+            <Link
+              href="https://iopscience.iop.org/article/10.3847/2515-5172/ad3422"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ fontWeight: 'bold', color: '#5596e6' }}
+            >
+              View Published Paper →
+            </Link>
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            💻{' '}
+            <Link
+              href="https://github.com/AyanGupta516/AstronomyResearch"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ fontWeight: 'bold', color: '#5596e6' }}
+            >
+              View on GitHub →
+            </Link>
+          </Typography>
+        </Box>
+      </Paper>
+    </Container>
+  );
+};
+
+export default UTResearchProject;

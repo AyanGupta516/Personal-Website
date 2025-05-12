@@ -2,10 +2,10 @@ import React from 'react';
 import { Container, Typography, Box, Paper, Chip, Divider } from '@mui/material';
 
 const techStack = [
-  'React Native', 'Flask', 'Supabase', 'Retool', 'PostgreSQL'
+  'React Native', 'FastAPI', 'Python', 'GPT (RAG)', 'PostgreSQL',
 ];
 
-const Qwell = () => {
+const CuraProject = () => {
   return (
     <Container maxWidth="md" sx={{ mt: 6, mb: 8 }}>
       <Typography
@@ -16,15 +16,15 @@ const Qwell = () => {
         sx={{ color: '#5596e6', mb: 1 }}
         fontFamily="monospace"
       >
-        Qwell
+        Cura
       </Typography>
 
       <Paper elevation={4} sx={{ p: 4, borderRadius: 3 }}>
         <Typography variant="body1" color="text.secondary" paragraph>
-          Qwell is an Austin-based non-profit that connects LGBTQ+ members with local, inclusive businesses. As part of a cross-functional team of 10 spanning tech, design, and product, I contributed to building a mobile application for the organization.
+          As part of TX Convergent, my team and I developed a React Native app for a local startup called Cura, aimed at personalizing treatment plans for patients with schizophrenia. The app leverages a Retriever-Augmented Generation (RAG) model integrated with GPT, using medically approved treatment plans as contextual data to generate personalized care recommendations. This ensures that the recommendations align with established medical guidelines while being tailored to the unique needs of each patient.
         </Typography>
         <Typography variant="body1" color="text.secondary" paragraph>
-          I developed key frontend components using React Native and integrated Flask with Supabase to build and maintain backend services. I also used Retool to design dynamic admin pages, allowing Qwell to efficiently manage business data in real time.
+          I helped implement backend API endpoints using FastAPI and designed key frontend components in React Native to streamline caregiver workflows and enhance user experience.
         </Typography>
 
         <Divider sx={{ my: 3 }} />
@@ -49,11 +49,10 @@ const Qwell = () => {
             borderRadius: 2,
             boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)',
             overflow: 'hidden',
-            willChange: 'transform',
           }}
         >
           <iframe
-            loading="eager"
+            loading="lazy"
             style={{
               position: 'absolute',
               width: '100%',
@@ -62,17 +61,16 @@ const Qwell = () => {
               left: 0,
               border: 'none',
               padding: 0,
-              margin: 0,
+              margin: 0
             }}
-            src="https://www.canva.com/design/DAFpIqnWXoM/view?embed"
+            src="https://www.canva.com/design/DAGDFWFyJck/whiLNdQ3-fKoISHiMpU9UQ/view?embed"
             allowFullScreen
-            title="Qwell Project Presentation"
+            title="Cura Project Presentation"
           />
         </Box>
-
       </Paper>
     </Container>
   );
 };
 
-export default Qwell;
+export default CuraProject;

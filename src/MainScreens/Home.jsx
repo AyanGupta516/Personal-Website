@@ -14,7 +14,7 @@ export default function Home() {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '20px',
+    padding: '10px',
   };
 
   const textContainerStyle = {

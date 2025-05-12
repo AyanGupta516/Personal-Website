@@ -1,8 +1,13 @@
 import React from 'react';
 import { Chrono } from "react-chrono";
 
-
 const internships = [
+  {
+    title: 'SpaceX',
+    cardTitle: 'Software Engineering Intern',
+    cardSubtitle: 'Summer 2025',
+    cardDetailedText: 'Incoming Software Engineering Intern on Falcon Engineering team'
+  },
   {
     title: 'Texas Convergent',
     cardTitle: 'Technical Project Lead',
@@ -20,7 +25,6 @@ const internships = [
     cardTitle: 'Software Engineering Intern',
     cardSubtitle: 'Summer 2024',
     cardDetailedText: 'Worked on implementing frontend features for HPE Compute Ops Mangement Platform. In addition, develped a new FastAPI based Kubernetes microservice to forward UI Error logs to a logging service ',
-    
   },
   {
     title: 'University of Houston',
@@ -32,15 +36,19 @@ const internships = [
 
 const InternshipPage = () => {
   return (
-    <div style={{ width: '800px', height: '1050px', margin: '32.5px' }}>
-        <Chrono items={internships} mode="VERTICAL_ALTERNATING" hideControls = {true} theme={{
+    <div style={{ width: '90%', maxWidth: '800px', margin: '32.5px auto' }}>
+      <Chrono
+        items={internships}
+        mode="VERTICAL_ALTERNATING"
+        hideControls={true}
+        theme={{
           primary: 'white',
           secondary: 'transparent',
           cardBgColor: 'white',
           titleColor: 'white',
           titleColorActive: '#3BBA9C',
         }}
-       fontSizes={{
+        fontSizes={{
           cardSubtitle: '0.85rem',
           cardText: '0.75rem',
           cardTitle: '1rem',
