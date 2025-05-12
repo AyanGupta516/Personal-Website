@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Box, Paper, Chip, Divider } from '@mui/material';
-import PintOSDiagram from '../assets/PintOSDiagram.png'; // use relative path if needed
+import PintOSDiagram from '../assets/PintOsDiagram.png'; // use relative path if needed
 
 const techStack = [
   'C', 'Thread Scheduling', 'Semaphores', 'System Calls', 'Virtual Memory', 'File Systems'
